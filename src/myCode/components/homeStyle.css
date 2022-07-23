@@ -1,0 +1,140 @@
+
+* {
+    text-shadow: #810248 1px 1px, yellow 2px 2px, green 3px 3px, blueviolet 4px 4px;
+}
+
+#addForm {
+}
+
+#addForm input, #editForm input {
+    min-width: 80%;
+    font-size: 20pt;
+    text-align: center;
+    padding: 5pt;
+    box-shadow: skyblue 2px 2px;
+    border-radius: 5pt;
+
+
+}
+
+#addForm button, #editForm button {
+    width: 20%;
+    font-size: 20pt;
+    text-align: center;
+    padding: 5pt;
+    margin: 15pt;
+    background: repeating-linear-gradient(110deg, transparent, skyblue 10pt, transparent 20pt),
+    repeating-linear-gradient(20deg, pink 40%, lightseagreen 50%, transparent 60%, pink 70%);
+
+    box-shadow: orange 2px 2px;
+    border-radius: 5pt;
+
+}
+
+#editForm select {
+    width: 50%;
+    font-size: 20pt;
+    text-align: center;
+    padding: 5pt;
+    box-shadow: darkgreen 2px 2px;
+    border-radius: 5pt;
+
+}
+
+.todoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.todoContainer>div {
+    margin: 5pt;
+}
+.todoCard {
+    margin:5pt;
+    background: repeating-linear-gradient(110deg, transparent, skyblue 10pt, transparent 20pt),
+    repeating-linear-gradient(20deg, pink 40%, lightseagreen 50%, transparent 60%, pink 70%);
+    border-radius: 5pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: blueviolet 2px 2px;
+
+}
+
+.editButton {
+    font-size: 30pt;
+}
+
+.todoCard p {
+    font-size: 15pt;
+    max-width:50%;
+}
+
+.todoCard button {
+    font-size: 30pt;
+
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+}
+
+.marked button {
+    font-weight: bold;
+}
+
+.todoContainer .marked button {
+    font-size: 20pt;
+}
+
+.notmarked {
+    font-size: 10pt;
+}
+
+.unmarkedContainer {
+    display: grid;
+    grid-template-columns:10% 20% 30% 30%
+}
+
+.unmarkedContainer .unmarked {
+    width: 30%;
+}
+
+h1 button {
+    border: 1px black solid;
+    border-radius: 15pt;
+    margin-left: 5pt;
+    font-size: 30pt;
+    box-shadow: skyblue 2px 2px;
+}
+
+
+
+
+@media screen and (max-width: 1800px
+) {
+    .todoContainer>div {
+        max-width: 32%;
+        min-width: auto;
+    }
+}
+
+
+
+@media screen and (max-width: 800px
+) {
+    .todoContainer>div {
+        max-width: 400pt;
+        min-width: 200pt;
+    }
+}
+@media screen and (max-width: 400px
+) {
+    .todoContainer>div {
+        width: auto;
+    }
+}
+
