@@ -18,7 +18,7 @@ export default function ToDo(prop: TodoProp) {
              } else if (prop.todo.status === TodoStatus.IN_PROGRESS) {
                  status = TodoStatus.DONE;
              }else{status = TodoStatus.OPEN;}
-             putTodo( {id: prop.todo.id, description: prop.todo.description, status: status})
+             putTodo( {id: prop.todo.id, description: prop.todo.description, status: status, kategorie: prop.todo.kategorie})
                  .then(data => prop.setEdit(undefined)).catch((e) => console.log(e))
          }
      }
@@ -31,7 +31,7 @@ export default function ToDo(prop: TodoProp) {
                 } else if (prop.todo.status === TodoStatus.DONE) {
                     status = TodoStatus.IN_PROGRESS;
                 }else{status = TodoStatus.DONE;}
-                putTodo( {id: prop.todo.id, description: prop.todo.description, status: status})
+                putTodo( {id: prop.todo.id, description: prop.todo.description, status: status, kategorie: prop.todo.kategorie})
                     .then(data => prop.setEdit(undefined)).catch((e) => console.log(e))
             }
         }
@@ -39,9 +39,11 @@ export default function ToDo(prop: TodoProp) {
 
     return (
         <>
-        <div className="todoCard">
+        <div className={'todoCard '+prop.todo.kategorie}>
             <button onClick={decrease}> &lt; </button>
-            <p>{prop.todo.description}</p>
+           <div> <p>{prop.todo.description}</p>
+               <p>{prop.todo.kategorie? prop.todo.kategorie:"nix kategorie"}</p>
+           </div>
             <div>
             <button className="editButton" onClick={()=>prop.setEdit(prop.todo)}>&#9998;</button>
 

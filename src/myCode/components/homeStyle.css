@@ -3,18 +3,14 @@
     text-shadow: #810248 1px 1px, yellow 2px 2px, green 3px 3px, blueviolet 4px 4px;
 }
 
-#addForm {
-}
 
-#addForm input, #editForm input {
+#addForm input, #editForm input,#addForm select ,#editForm select {
     min-width: 80%;
     font-size: 20pt;
     text-align: center;
     padding: 5pt;
     box-shadow: skyblue 2px 2px;
     border-radius: 5pt;
-
-
 }
 
 #addForm button, #editForm button {
@@ -31,14 +27,27 @@
 
 }
 
-#editForm select {
-    width: 50%;
-    font-size: 20pt;
+h1 #searchInput{
+    background-color:grey;
+    position: absolute;
+    top:20pt;
+    right:10pt;
+    height:30pt;
+    border-radius:5pt;
+    font-size:20pt;
     text-align: center;
-    padding: 5pt;
-    box-shadow: darkgreen 2px 2px;
-    border-radius: 5pt;
-
+    width:130pt;
+}
+h1 select:first-child{
+    background-color:grey;
+    position: absolute;
+    top:20pt;
+    left:10pt;
+    height:30pt;
+    border-radius:5pt;
+    font-size:20pt;
+    text-align: center;
+    width:130pt;
 }
 
 .todoContainer {
@@ -54,32 +63,39 @@
     margin:5pt;
     background: repeating-linear-gradient(110deg, transparent, skyblue 10pt, transparent 20pt),
     repeating-linear-gradient(20deg, pink 40%, lightseagreen 50%, transparent 60%, pink 70%);
-    border-radius: 5pt;
+    border-radius: 10pt;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     box-shadow: blueviolet 2px 2px;
-
 }
 
 .editButton {
     font-size: 30pt;
 }
 
-.todoCard p {
+.todoCard>div {
     font-size: 15pt;
     max-width:50%;
 }
 
 .todoCard button {
     font-size: 30pt;
-
+}
+.todoCard>div {
+    align-self: center;
+}
+.todoCard p:nth-child(2){
+    font-size:10pt;
+color:black;
+}
+.todoCard p{
+    margin:2pt;
 }
 
 button {
     background-color: transparent;
     border: none;
-
 }
 
 .marked button {
@@ -112,8 +128,6 @@ h1 button {
 }
 
 
-
-
 @media screen and (max-width: 1800px
 ) {
     .todoContainer>div {
@@ -121,7 +135,6 @@ h1 button {
         min-width: auto;
     }
 }
-
 
 
 @media screen and (max-width: 800px
@@ -136,5 +149,26 @@ h1 button {
     .todoContainer>div {
         width: auto;
     }
+}
+
+.EINKAUF{
+    background-color:green;
+    color:yellow;
+}
+.GARTEN{
+    background-color:green;
+    color:darkgreen;
+}
+.BERUF{
+    background-color:green;
+    color:orange;
+}
+.BUERO{
+    background-color:green;
+    color:darkorange;
+}
+.HAUSHALT{
+    background-color:green;
+    color:blue;
 }
 
